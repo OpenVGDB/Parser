@@ -1,0 +1,429 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		947B9E31185C0FFA00C93A27 /* NSString+Contains.m in Sources */ = {isa = PBXBuildFile; fileRef = 947B9E30185C0FFA00C93A27 /* NSString+Contains.m */; };
+		947B9E38185CC68700C93A27 /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 947B9E37185CC67300C93A27 /* CHCSVParser.m */; };
+		94BEF7671859906A00189580 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BEF7661859906A00189580 /* main.m */; };
+		94BEF76A1859A0CE00189580 /* NSString+QuoteFix.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BEF7691859A0CE00189580 /* NSString+QuoteFix.m */; };
+		94E4C6E016D5F2B400FDFB82 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E4C6DF16D5F2B400FDFB82 /* Foundation.framework */; };
+		94E4C6E716D5F2B400FDFB82 /* Parse.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 94E4C6E616D5F2B400FDFB82 /* Parse.1 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		94E4C6DA16D5F2B400FDFB82 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				94E4C6E716D5F2B400FDFB82 /* Parse.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		947B9E2F185C0FFA00C93A27 /* NSString+Contains.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Contains.h"; sourceTree = "<group>"; };
+		947B9E30185C0FFA00C93A27 /* NSString+Contains.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Contains.m"; sourceTree = "<group>"; };
+		947B9E36185CC67300C93A27 /* CHCSVParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHCSVParser.h; sourceTree = "<group>"; };
+		947B9E37185CC67300C93A27 /* CHCSVParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHCSVParser.m; sourceTree = "<group>"; };
+		947B9E40185D337200C93A27 /* 5200.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = 5200.csv; sourceTree = "<group>"; };
+		947B9E41185D337200C93A27 /* 7800.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = 7800.csv; sourceTree = "<group>"; };
+		947B9E44185D337200C93A27 /* Colecovision.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = Colecovision.csv; sourceTree = "<group>"; };
+		947B9E48185D337200C93A27 /* FDS.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = FDS.csv; sourceTree = "<group>"; };
+		947B9E49185D337200C93A27 /* GBA.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = GBA.csv; sourceTree = "<group>"; };
+		947B9E4A185D337200C93A27 /* GBC.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = GBC.csv; sourceTree = "<group>"; };
+		947B9E4B185D337200C93A27 /* GB.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = GB.csv; sourceTree = "<group>"; };
+		947B9E4D185D337200C93A27 /* GG.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = GG.csv; sourceTree = "<group>"; };
+		947B9E4E185D337200C93A27 /* MD.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = MD.csv; sourceTree = "<group>"; };
+		947B9E51185D337200C93A27 /* Jaguar.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = Jaguar.csv; sourceTree = "<group>"; };
+		947B9E52185D337200C93A27 /* Lynx.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = Lynx.csv; sourceTree = "<group>"; };
+		947B9E54185D337200C93A27 /* NGPC.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = NGPC.csv; sourceTree = "<group>"; };
+		947B9E56185D337200C93A27 /* NES.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = NES.csv; sourceTree = "<group>"; };
+		947B9E57185D337200C93A27 /* N64.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = N64.csv; sourceTree = "<group>"; };
+		947B9E5D185D337200C93A27 /* 32X.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = 32X.csv; sourceTree = "<group>"; };
+		947B9E5F185D337200C93A27 /* SMS.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = SMS.csv; sourceTree = "<group>"; };
+		947B9E60185D337200C93A27 /* SG1000.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = SG1000.csv; sourceTree = "<group>"; };
+		947B9E61185D337200C93A27 /* SNES.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = SNES.csv; sourceTree = "<group>"; };
+		947B9E63185D337200C93A27 /* PCE.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = PCE.csv; sourceTree = "<group>"; };
+		947B9E64185D337200C93A27 /* Vectrex.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = Vectrex.csv; sourceTree = "<group>"; };
+		947B9E65185D337200C93A27 /* VB.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = VB.csv; sourceTree = "<group>"; };
+		947B9E67185D337200C93A27 /* WSC.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = WSC.csv; sourceTree = "<group>"; };
+		947B9E6D185D337200C93A27 /* 5200.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = 5200.csv; sourceTree = "<group>"; };
+		947B9E6E185D337200C93A27 /* 7800.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = 7800.csv; sourceTree = "<group>"; };
+		947B9E79185D337200C93A27 /* GBA.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = GBA.csv; sourceTree = "<group>"; };
+		947B9E7C185D337200C93A27 /* GG.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = GG.csv; sourceTree = "<group>"; };
+		947B9E7D185D337200C93A27 /* MD.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = MD.csv; sourceTree = "<group>"; };
+		947B9E7F185D337200C93A27 /* Jaguar.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = Jaguar.csv; sourceTree = "<group>"; };
+		947B9E80185D337200C93A27 /* Lynx.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = Lynx.csv; sourceTree = "<group>"; };
+		947B9E82185D337200C93A27 /* NGPC.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = NGPC.csv; sourceTree = "<group>"; };
+		947B9E83185D337200C93A27 /* NES.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = NES.csv; sourceTree = "<group>"; };
+		947B9E84185D337200C93A27 /* N64.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = N64.csv; sourceTree = "<group>"; };
+		947B9E8C185D337200C93A27 /* 32X.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = 32X.csv; sourceTree = "<group>"; };
+		947B9E8E185D337200C93A27 /* SG1000.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = SG1000.csv; sourceTree = "<group>"; };
+		947B9E8F185D337200C93A27 /* SNES.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = SNES.csv; sourceTree = "<group>"; };
+		947B9E91185D337200C93A27 /* PCE.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = PCE.csv; sourceTree = "<group>"; };
+		947B9E92185D337200C93A27 /* Vectrex.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = Vectrex.csv; sourceTree = "<group>"; };
+		947B9E94185D337200C93A27 /* VB.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = VB.csv; sourceTree = "<group>"; };
+		947B9E96185D337200C93A27 /* WSC.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = WSC.csv; sourceTree = "<group>"; };
+		947B9E97185D337200C93A27 /* WS.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = WS.csv; sourceTree = "<group>"; };
+		947B9E99185D653900C93A27 /* source-32x.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "source-32x.txt"; sourceTree = "<group>"; };
+		947B9E9A185D653900C93A27 /* source-5200.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "source-5200.txt"; sourceTree = "<group>"; };
+		947B9E9B185D653900C93A27 /* source-7800.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "source-7800.txt"; sourceTree = "<group>"; };
+		947B9E9C185D653900C93A27 /* source-colecovision.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "source-colecovision.txt"; sourceTree = "<group>"; };
+		947B9E9D185D653900C93A27 /* source-fds.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "source-fds.txt"; sourceTree = "<group>"; };
+		947B9E9E185D653900C93A27 /* source-gb.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "source-gb.txt"; sourceTree = "<group>"; };
+		947B9E9F185D653900C93A27 /* source-gba.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "source-gba.txt"; sourceTree = "<group>"; };
+		947B9EA0185D653900C93A27 /* source-gbc.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "source-gbc.txt"; sourceTree = "<group>"; };
+		947B9EA1185D653900C93A27 /* source-gg.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "source-gg.txt"; sourceTree = "<group>"; };
+		947B9EA2185D653900C93A27 /* source-jaguar.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "source-jaguar.txt"; sourceTree = "<group>"; };
+		947B9EA3185D653900C93A27 /* source-lynx.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "source-lynx.txt"; sourceTree = "<group>"; };
+		947B9EA4185D653900C93A27 /* source-md.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "source-md.txt"; sourceTree = "<group>"; };
+		947B9EA5185D653900C93A27 /* source-n64.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "source-n64.txt"; sourceTree = "<group>"; };
+		947B9EA6185D653900C93A27 /* source-nes.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "source-nes.txt"; sourceTree = "<group>"; };
+		947B9EA7185D653900C93A27 /* source-ngp.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "source-ngp.txt"; sourceTree = "<group>"; };
+		947B9EA8185D653900C93A27 /* source-ngpc.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "source-ngpc.txt"; sourceTree = "<group>"; };
+		947B9EA9185D653900C93A27 /* source-pce.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "source-pce.txt"; sourceTree = "<group>"; };
+		947B9EAA185D653900C93A27 /* source-sg1000.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "source-sg1000.txt"; sourceTree = "<group>"; };
+		947B9EAB185D653900C93A27 /* source-sms.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "source-sms.txt"; sourceTree = "<group>"; };
+		947B9EAC185D653900C93A27 /* source-snes.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "source-snes.txt"; sourceTree = "<group>"; };
+		947B9EAD185D653900C93A27 /* source-supergrafx.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "source-supergrafx.txt"; sourceTree = "<group>"; };
+		947B9EAE185D653900C93A27 /* source-vb.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "source-vb.txt"; sourceTree = "<group>"; };
+		947B9EAF185D653900C93A27 /* source-vectrex.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "source-vectrex.txt"; sourceTree = "<group>"; };
+		947B9EB0185D653900C93A27 /* source-wonderswan color.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "source-wonderswan color.txt"; sourceTree = "<group>"; };
+		947B9EB1185D653900C93A27 /* source-wonderswan.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "source-wonderswan.txt"; sourceTree = "<group>"; };
+		94BEF7661859906A00189580 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		94BEF7681859A0CE00189580 /* NSString+QuoteFix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+QuoteFix.h"; sourceTree = "<group>"; };
+		94BEF7691859A0CE00189580 /* NSString+QuoteFix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+QuoteFix.m"; sourceTree = "<group>"; };
+		94E4C6DC16D5F2B400FDFB82 /* Parse */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Parse; sourceTree = BUILT_PRODUCTS_DIR; };
+		94E4C6DF16D5F2B400FDFB82 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		94E4C6E516D5F2B400FDFB82 /* Parse-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Parse-Prefix.pch"; sourceTree = "<group>"; };
+		94E4C6E616D5F2B400FDFB82 /* Parse.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Parse.1; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		94E4C6D916D5F2B400FDFB82 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94E4C6E016D5F2B400FDFB82 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		947B9E35185CC67300C93A27 /* CHCSVParser */ = {
+			isa = PBXGroup;
+			children = (
+				947B9E36185CC67300C93A27 /* CHCSVParser.h */,
+				947B9E37185CC67300C93A27 /* CHCSVParser.m */,
+			);
+			path = CHCSVParser;
+			sourceTree = "<group>";
+		};
+		947B9E3C185D337200C93A27 /* covers */ = {
+			isa = PBXGroup;
+			children = (
+				947B9E40185D337200C93A27 /* 5200.csv */,
+				947B9E41185D337200C93A27 /* 7800.csv */,
+				947B9E44185D337200C93A27 /* Colecovision.csv */,
+				947B9E48185D337200C93A27 /* FDS.csv */,
+				947B9E49185D337200C93A27 /* GBA.csv */,
+				947B9E4A185D337200C93A27 /* GBC.csv */,
+				947B9E4B185D337200C93A27 /* GB.csv */,
+				947B9E4D185D337200C93A27 /* GG.csv */,
+				947B9E4E185D337200C93A27 /* MD.csv */,
+				947B9E51185D337200C93A27 /* Jaguar.csv */,
+				947B9E52185D337200C93A27 /* Lynx.csv */,
+				947B9E54185D337200C93A27 /* NGPC.csv */,
+				947B9E56185D337200C93A27 /* NES.csv */,
+				947B9E57185D337200C93A27 /* N64.csv */,
+				947B9E5D185D337200C93A27 /* 32X.csv */,
+				947B9E5F185D337200C93A27 /* SMS.csv */,
+				947B9E60185D337200C93A27 /* SG1000.csv */,
+				947B9E61185D337200C93A27 /* SNES.csv */,
+				947B9E63185D337200C93A27 /* PCE.csv */,
+				947B9E64185D337200C93A27 /* Vectrex.csv */,
+				947B9E65185D337200C93A27 /* VB.csv */,
+				947B9E67185D337200C93A27 /* WSC.csv */,
+			);
+			path = covers;
+			sourceTree = "<group>";
+		};
+		947B9E68185D337200C93A27 /* metadata */ = {
+			isa = PBXGroup;
+			children = (
+				947B9E6D185D337200C93A27 /* 5200.csv */,
+				947B9E6E185D337200C93A27 /* 7800.csv */,
+				947B9E79185D337200C93A27 /* GBA.csv */,
+				947B9E7C185D337200C93A27 /* GG.csv */,
+				947B9E7D185D337200C93A27 /* MD.csv */,
+				947B9E7F185D337200C93A27 /* Jaguar.csv */,
+				947B9E80185D337200C93A27 /* Lynx.csv */,
+				947B9E82185D337200C93A27 /* NGPC.csv */,
+				947B9E83185D337200C93A27 /* NES.csv */,
+				947B9E84185D337200C93A27 /* N64.csv */,
+				947B9E8C185D337200C93A27 /* 32X.csv */,
+				947B9E8E185D337200C93A27 /* SG1000.csv */,
+				947B9E8F185D337200C93A27 /* SNES.csv */,
+				947B9E91185D337200C93A27 /* PCE.csv */,
+				947B9E92185D337200C93A27 /* Vectrex.csv */,
+				947B9E94185D337200C93A27 /* VB.csv */,
+				947B9E96185D337200C93A27 /* WSC.csv */,
+				947B9E97185D337200C93A27 /* WS.csv */,
+			);
+			path = metadata;
+			sourceTree = "<group>";
+		};
+		947B9E98185D653900C93A27 /* releases */ = {
+			isa = PBXGroup;
+			children = (
+				947B9E99185D653900C93A27 /* source-32x.txt */,
+				947B9E9A185D653900C93A27 /* source-5200.txt */,
+				947B9E9B185D653900C93A27 /* source-7800.txt */,
+				947B9E9C185D653900C93A27 /* source-colecovision.txt */,
+				947B9E9D185D653900C93A27 /* source-fds.txt */,
+				947B9E9E185D653900C93A27 /* source-gb.txt */,
+				947B9E9F185D653900C93A27 /* source-gba.txt */,
+				947B9EA0185D653900C93A27 /* source-gbc.txt */,
+				947B9EA1185D653900C93A27 /* source-gg.txt */,
+				947B9EA2185D653900C93A27 /* source-jaguar.txt */,
+				947B9EA3185D653900C93A27 /* source-lynx.txt */,
+				947B9EA4185D653900C93A27 /* source-md.txt */,
+				947B9EA5185D653900C93A27 /* source-n64.txt */,
+				947B9EA6185D653900C93A27 /* source-nes.txt */,
+				947B9EA7185D653900C93A27 /* source-ngp.txt */,
+				947B9EA8185D653900C93A27 /* source-ngpc.txt */,
+				947B9EA9185D653900C93A27 /* source-pce.txt */,
+				947B9EAA185D653900C93A27 /* source-sg1000.txt */,
+				947B9EAB185D653900C93A27 /* source-sms.txt */,
+				947B9EAC185D653900C93A27 /* source-snes.txt */,
+				947B9EAD185D653900C93A27 /* source-supergrafx.txt */,
+				947B9EAE185D653900C93A27 /* source-vb.txt */,
+				947B9EAF185D653900C93A27 /* source-vectrex.txt */,
+				947B9EB0185D653900C93A27 /* source-wonderswan color.txt */,
+				947B9EB1185D653900C93A27 /* source-wonderswan.txt */,
+			);
+			path = releases;
+			sourceTree = "<group>";
+		};
+		94E4C6D316D5F2B400FDFB82 = {
+			isa = PBXGroup;
+			children = (
+				94E4C6E116D5F2B400FDFB82 /* Parse */,
+				94E4C6DE16D5F2B400FDFB82 /* Frameworks */,
+				94E4C6DD16D5F2B400FDFB82 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		94E4C6DD16D5F2B400FDFB82 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				94E4C6DC16D5F2B400FDFB82 /* Parse */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		94E4C6DE16D5F2B400FDFB82 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				94E4C6DF16D5F2B400FDFB82 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		94E4C6E116D5F2B400FDFB82 /* Parse */ = {
+			isa = PBXGroup;
+			children = (
+				947B9E98185D653900C93A27 /* releases */,
+				947B9E3C185D337200C93A27 /* covers */,
+				947B9E68185D337200C93A27 /* metadata */,
+				94BEF7661859906A00189580 /* main.m */,
+				94E4C6E616D5F2B400FDFB82 /* Parse.1 */,
+				94BEF7681859A0CE00189580 /* NSString+QuoteFix.h */,
+				94BEF7691859A0CE00189580 /* NSString+QuoteFix.m */,
+				947B9E2F185C0FFA00C93A27 /* NSString+Contains.h */,
+				947B9E30185C0FFA00C93A27 /* NSString+Contains.m */,
+				947B9E35185CC67300C93A27 /* CHCSVParser */,
+				94E4C6E416D5F2B400FDFB82 /* Supporting Files */,
+			);
+			path = Parse;
+			sourceTree = "<group>";
+		};
+		94E4C6E416D5F2B400FDFB82 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				94E4C6E516D5F2B400FDFB82 /* Parse-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		94E4C6DB16D5F2B400FDFB82 /* Parse */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94E4C6EA16D5F2B400FDFB82 /* Build configuration list for PBXNativeTarget "Parse" */;
+			buildPhases = (
+				94E4C6D816D5F2B400FDFB82 /* Sources */,
+				94E4C6D916D5F2B400FDFB82 /* Frameworks */,
+				94E4C6DA16D5F2B400FDFB82 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Parse;
+			productName = Parse;
+			productReference = 94E4C6DC16D5F2B400FDFB82 /* Parse */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		94E4C6D416D5F2B400FDFB82 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = OpenEmu;
+			};
+			buildConfigurationList = 94E4C6D716D5F2B400FDFB82 /* Build configuration list for PBXProject "Parse" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 94E4C6D316D5F2B400FDFB82;
+			productRefGroup = 94E4C6DD16D5F2B400FDFB82 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				94E4C6DB16D5F2B400FDFB82 /* Parse */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		94E4C6D816D5F2B400FDFB82 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				947B9E38185CC68700C93A27 /* CHCSVParser.m in Sources */,
+				947B9E31185C0FFA00C93A27 /* NSString+Contains.m in Sources */,
+				94BEF76A1859A0CE00189580 /* NSString+QuoteFix.m in Sources */,
+				94BEF7671859906A00189580 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		94E4C6E816D5F2B400FDFB82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					"FILEPATH=@\\\"$(PROJECT_DIR)\\\"",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		94E4C6E916D5F2B400FDFB82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		94E4C6EB16D5F2B400FDFB82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Parse/Parse-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		94E4C6EC16D5F2B400FDFB82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Parse/Parse-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		94E4C6D716D5F2B400FDFB82 /* Build configuration list for PBXProject "Parse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94E4C6E816D5F2B400FDFB82 /* Debug */,
+				94E4C6E916D5F2B400FDFB82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94E4C6EA16D5F2B400FDFB82 /* Build configuration list for PBXNativeTarget "Parse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94E4C6EB16D5F2B400FDFB82 /* Debug */,
+				94E4C6EC16D5F2B400FDFB82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 94E4C6D416D5F2B400FDFB82 /* Project object */;
+}
