@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'Parse' target in the 'Parse' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif

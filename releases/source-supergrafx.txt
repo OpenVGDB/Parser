@@ -1,0 +1,6 @@
+"releaseID","romID","releaseTitleName","regionLocalizedID","TEMPregionLocalizedName","TEMPsystemShortName","TEMPsystemName","releaseCoverFront","releaseCoverBack","releaseCoverCart","releaseCoverDisc","releaseDescription","releaseDeveloper","releasePublisher","releaseGenre","releaseDate","releaseReferenceURL"
+15492,14438,"1941: Counter Attack",13,"Japan","SuperGrafx","NEC SuperGrafx","","","","","","","","","",""
+15493,14439,"Aldynes: The Misson Code for Rage Crisis",13,"Japan","SuperGrafx","NEC SuperGrafx","","","","","","","","","",""
+15494,14440,"Battle Ace",13,"Japan","SuperGrafx","NEC SuperGrafx","","","","","","","","","",""
+15495,14441,"Daimakai Mura",13,"Japan","SuperGrafx","NEC SuperGrafx","","","","","","","","","",""
+15496,14442,"Madou King Granzort",13,"Japan","SuperGrafx","NEC SuperGrafx","","","","","","","","","",""
