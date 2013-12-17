@@ -17,23 +17,30 @@
     NSMutableArray *metadataReturnArray;
 }
 
-- (NSArray *)sourceArrayFromCSV:(NSString *)csv format:(NSArray *)format ignoreHeader:(BOOL)ignore;
-- (NSArray *)coversArrayFromCSV:(NSString *)csv format:(NSArray *)format ignoreHeader:(BOOL)ignore;
-- (NSArray *)metadataArrayFromCSV:(NSString *)csv format:(NSArray *)format ignoreHeader:(BOOL)ignore;
+- (NSArray *)arrayFromCSV:(NSString *)csv returnArray:(NSArray *)returnArray format:(NSArray *)format ignoreHeader:(BOOL)ignore;
 
 @end
 
 
 @implementation CSV
 
-- (NSArray *)sourceArrayFromCSV:(NSString *)path format:(NSArray *)format ignoreHeader:(BOOL)ignore {
+-(id) init {
+    if (self = [super init])
+    {
+        sourceReturnArray = [NSMutableArray array];
+        coversReturnArray = [NSMutableArray array];
+        metadataReturnArray = [NSMutableArray array];
+    }
+    return self;
+}
+
+- (NSArray *)arrayFromCSV:(NSString *)path returnArray:(NSMutableArray *)returnArray format:(NSArray *)format ignoreHeader:(BOOL)ignore {
     NSArray *dataRows = [NSArray arrayWithContentsOfCSVFile:path];
     NSInteger expectedRowComponents = [[dataRows objectAtIndex:0] count];
     if ([format count] > expectedRowComponents) {
         // more format keys than components
         return nil;
     }
-    sourceReturnArray = [NSMutableArray array];
     for ( NSInteger i = 0; i < [dataRows count]; i++ ) {
         if (i == 0 && ignore)
             // ignore first line in csv, "header"
@@ -47,139 +54,10 @@
                 [tmpDict setObject:[rowComponents objectAtIndex:j] forKey:[format objectAtIndex:j]];
             }
         }
-        [sourceReturnArray addObject:tmpDict];
+        [returnArray addObject:tmpDict];
     }
-    return sourceReturnArray;
+    return returnArray;
 }
-
-- (NSArray *)coversArrayFromCSV:(NSString *)path format:(NSArray *)format ignoreHeader:(BOOL)ignore {
-    NSArray *dataRows = [NSArray arrayWithContentsOfCSVFile:path];
-    NSInteger expectedRowComponents = [[dataRows objectAtIndex:0] count];
-    if ([format count] > expectedRowComponents) {
-        // more format keys than components
-        return nil;
-    }
-    coversReturnArray = [NSMutableArray array];
-    for ( NSInteger i = 0; i < [dataRows count]; i++ ) {
-        if (i == 0 && ignore)
-            // ignore first line in csv, "header"
-            continue;
-        NSArray *rowComponents = [dataRows objectAtIndex:i];
-        if ( [rowComponents count] != expectedRowComponents )
-            continue;
-        NSMutableDictionary *tmpDict = [NSMutableDictionary dictionary];
-        for ( NSInteger j = 0; j < [format count]; j++ ) {
-            if ( [format objectAtIndex:j] != [NSNull null] ) {
-                [tmpDict setObject:[rowComponents objectAtIndex:j] forKey:[format objectAtIndex:j]];
-            }
-        }
-        [coversReturnArray addObject:tmpDict];
-    }
-    return coversReturnArray;
-}
-
-- (NSArray *)metadataArrayFromCSV:(NSString *)path format:(NSArray *)format ignoreHeader:(BOOL)ignore {
-    NSArray *dataRows = [NSArray arrayWithContentsOfCSVFile:path];
-    //NSLog(@"%@", dataRows);
-    //NSInteger expectedRowComponents = [[dataRows objectAtIndex:0] count];
-    //NSArray *dataRows = [csv componentsSeparatedByString:@"\n"];
-    //NSArray *checkrow = [[dataRows objectAtIndex:0] componentsSeparatedByString:@","];
-    //NSArray *checkrow = [[dataRows objectAtIndex:0] componentsSeparatedByComma];
-    NSInteger expectedRowComponents = [[dataRows objectAtIndex:0] count];
-    if ([format count] > expectedRowComponents) {
-        // more format keys than components
-        return nil;
-    }
-    //NSMutableArray *returnArray = [NSMutableArray array];
-    metadataReturnArray = [NSMutableArray array];
-    for ( NSInteger i = 0; i < [dataRows count]; i++ ) {
-        if (i == 0 && ignore)
-            // ignore first line in csv, "header"
-            continue;
-        //NSString *row = [dataRows objectAtIndex:i];
-        //NSArray *rowComponents = [row componentsSeparatedByString:@";"];
-        //NSArray *rowComponents = [row componentsSeparatedByComma];
-        NSArray *rowComponents = [dataRows objectAtIndex:i];
-        if ( [rowComponents count] != expectedRowComponents )
-            continue;
-        NSMutableDictionary *tmpDict = [NSMutableDictionary dictionary];
-        for ( NSInteger j = 0; j < [format count]; j++ ) {
-            if ( [format objectAtIndex:j] != [NSNull null] ) {
-                [tmpDict setObject:[rowComponents objectAtIndex:j] forKey:[format objectAtIndex:j]];
-            }
-        }
-        [metadataReturnArray addObject:tmpDict];
-    }
-    //NSLog(@"%@", csv);
-    //NSLog(@"%@", metadataReturnArray);
-    return metadataReturnArray;
-}
-
-//- (NSArray *)sourceArrayFromCSV:(NSString *)csv format:(NSArray *)format ignoreHeader:(BOOL)ignore {
-//    NSArray *dataRows = [csv componentsSeparatedByString:@"\n"];
-//    NSArray *checkrow = [[dataRows objectAtIndex:0] componentsSeparatedByString:@";"];
-//    //NSArray *checkrow = [[dataRows objectAtIndex:0] componentsSeparatedByComma];
-//    NSInteger expectedRowComponents = [checkrow count];
-//    if ([format count] > expectedRowComponents) {
-//        // more format keys than components
-//        return nil;
-//    }
-//    //NSMutableArray *returnArray = [NSMutableArray array];
-//    sourceReturnArray = [NSMutableArray array];
-//    for ( NSInteger i = 0; i < [dataRows count]; i++ ) {
-//        if (i == 0 && ignore)
-//            // ignore first line in csv, "header"
-//            continue;
-//        NSString *row = [dataRows objectAtIndex:i];
-//        NSArray *rowComponents = [row componentsSeparatedByString:@";"];
-//        //NSArray *rowComponents = [row componentsSeparatedByComma];
-//        if ( [rowComponents count] != expectedRowComponents )
-//            continue;
-//        NSMutableDictionary *tmpDict = [NSMutableDictionary dictionary];
-//        for ( NSInteger j = 0; j < [format count]; j++ ) {
-//            if ( [format objectAtIndex:j] != [NSNull null] ) {
-//                [tmpDict setObject:[rowComponents objectAtIndex:j] forKey:[format objectAtIndex:j]];
-//            }
-//        }
-//        [sourceReturnArray addObject:tmpDict];
-//    }
-//    //NSLog(@"%@", csv);
-//    //NSLog(@"%@", sourceReturnArray);
-//    return sourceReturnArray;
-//}
-
-//- (NSArray *)compareArrayFromCSV:(NSString *)csv format:(NSArray *)format ignoreHeader:(BOOL)ignore {
-//    NSArray *dataRows = [csv componentsSeparatedByString:@"\n"];
-//    NSArray *checkrow = [[dataRows objectAtIndex:0] componentsSeparatedByString:@";"];
-//    //NSArray *checkrow = [[dataRows objectAtIndex:0] componentsSeparatedByComma];
-//    NSInteger expectedRowComponents = [checkrow count];
-//    if ([format count] > expectedRowComponents) {
-//        // more format keys than components
-//        return nil;
-//    }
-//    //NSMutableArray *returnArray = [NSMutableArray array];
-//    compareReturnArray = [NSMutableArray array];
-//    for ( NSInteger i = 0; i < [dataRows count]; i++ ) {
-//        if (i == 0 && ignore)
-//            // ignore first line in csv, "header"
-//            continue;
-//        NSString *row = [dataRows objectAtIndex:i];
-//        NSArray *rowComponents = [row componentsSeparatedByString:@";"];
-//        //NSArray *rowComponents = [row componentsSeparatedByComma];
-//        if ( [rowComponents count] != expectedRowComponents )
-//            continue;
-//        NSMutableDictionary *tmpDict = [NSMutableDictionary dictionary];
-//        for ( NSInteger j = 0; j < [format count]; j++ ) {
-//            if ( [format objectAtIndex:j] != [NSNull null] ) {
-//                [tmpDict setObject:[rowComponents objectAtIndex:j] forKey:[format objectAtIndex:j]];
-//            }
-//        }
-//        [compareReturnArray addObject:tmpDict];
-//    }
-//    //NSLog(@"%@", csv);
-//    //NSLog(@"%@", compareReturnArray);
-//    return compareReturnArray;
-//}
 
 @end
 
@@ -191,9 +69,6 @@ int main(int argc, const char * argv[])
         
         // Setup source CSV and format
         NSString *sourceCSVPATH = [[@(__FILE__) stringByDeletingLastPathComponent] stringByAppendingPathComponent:@"releases/source-32x.txt"];
-//        NSString *sourceCSV = [NSString stringWithContentsOfFile:sourceCSVPATH
-//                                                  encoding:NSUTF8StringEncoding
-//                                                     error:NULL];
         
         NSArray *sourceFormat = @[ @"releaseID",
                                    @"romID",
@@ -214,15 +89,11 @@ int main(int argc, const char * argv[])
                                    @"releaseReferenceURL",
                                    ];
         
-        //[dataSource sourceArrayFromCSV:sourceCSV format:sourceFormat ignoreHeader:YES];
-        [dataSource sourceArrayFromCSV:sourceCSVPATH format:sourceFormat ignoreHeader:YES];
+        [dataSource arrayFromCSV:sourceCSVPATH returnArray:dataSource->sourceReturnArray format:sourceFormat ignoreHeader:YES];
         
         
         // Setup covers CSV and format
         NSString *coversCSVPATH = [[@(__FILE__) stringByDeletingLastPathComponent] stringByAppendingPathComponent:@"covers/32X.csv"];
-//        NSString *coversCSV = [NSString stringWithContentsOfFile:coversCSVPATH
-//                                                        encoding:NSUTF8StringEncoding
-//                                                           error:NULL];
         
         NSArray *coversFormat = @[ @"Title",
                                    @"CoverRegionName",
@@ -230,14 +101,10 @@ int main(int argc, const char * argv[])
                                    @"CoverURL"
                                    ];
         
-        //[dataSource coversArrayFromCSV:coversCSV format:coversFormat ignoreHeader:YES];
-        [dataSource coversArrayFromCSV:coversCSVPATH format:coversFormat ignoreHeader:YES];
+        [dataSource arrayFromCSV:coversCSVPATH returnArray:dataSource->coversReturnArray format:coversFormat ignoreHeader:YES];
         
         // Setup metadata CSV and format
         NSString *metadataCSVPATH = [[@(__FILE__) stringByDeletingLastPathComponent] stringByAppendingPathComponent:@"metadata/32X.csv"];
-//        NSString *metadataCSV = [NSString stringWithContentsOfFile:metadataCSVPATH
-//                                                         encoding:NSUTF8StringEncoding
-//                                                            error:NULL];
         
         NSArray *metadataFormat = @[ @"Title",
                                      @"Genres",
@@ -250,9 +117,7 @@ int main(int argc, const char * argv[])
                                      @"ReferenceURL"
                                     ];
         
-        //[dataSource metadataArrayFromCSV:metadataCSV format:metadataFormat ignoreHeader:YES];
-        
-        [dataSource metadataArrayFromCSV:metadataCSVPATH format:metadataFormat ignoreHeader:YES];
+        [dataSource arrayFromCSV:metadataCSVPATH returnArray:dataSource->metadataReturnArray format:metadataFormat ignoreHeader:YES];
         
         //NSLog(@"%@", [dataSource->sourceReturnArray objectAtIndex:2]);
         //NSLog(@"%@", [dataSource->coversReturnArray objectAtIndex:2]);
