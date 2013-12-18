@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44C312931861A6FA001ADB26 /* NSString+FuzzyCompare.m in Sources */ = {isa = PBXBuildFile; fileRef = 44C312921861A6FA001ADB26 /* NSString+FuzzyCompare.m */; };
 		947B9E31185C0FFA00C93A27 /* NSString+Contains.m in Sources */ = {isa = PBXBuildFile; fileRef = 947B9E30185C0FFA00C93A27 /* NSString+Contains.m */; };
 		947B9E38185CC68700C93A27 /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 947B9E37185CC67300C93A27 /* CHCSVParser.m */; };
 		94BEF7671859906A00189580 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BEF7661859906A00189580 /* main.m */; };
@@ -29,6 +30,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		44C312911861A6FA001ADB26 /* NSString+FuzzyCompare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FuzzyCompare.h"; sourceTree = "<group>"; };
+		44C312921861A6FA001ADB26 /* NSString+FuzzyCompare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FuzzyCompare.m"; sourceTree = "<group>"; };
 		947B9E2F185C0FFA00C93A27 /* NSString+Contains.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Contains.h"; sourceTree = "<group>"; };
 		947B9E30185C0FFA00C93A27 /* NSString+Contains.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Contains.m"; sourceTree = "<group>"; };
 		947B9E36185CC67300C93A27 /* CHCSVParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHCSVParser.h; sourceTree = "<group>"; };
@@ -242,6 +245,8 @@
 		94E4C6E116D5F2B400FDFB82 /* Parse */ = {
 			isa = PBXGroup;
 			children = (
+				44C312911861A6FA001ADB26 /* NSString+FuzzyCompare.h */,
+				44C312921861A6FA001ADB26 /* NSString+FuzzyCompare.m */,
 				947B9E98185D653900C93A27 /* releases */,
 				947B9E3C185D337200C93A27 /* covers */,
 				947B9E68185D337200C93A27 /* metadata */,
@@ -319,6 +324,7 @@
 				947B9E38185CC68700C93A27 /* CHCSVParser.m in Sources */,
 				947B9E31185C0FFA00C93A27 /* NSString+Contains.m in Sources */,
 				94BEF76A1859A0CE00189580 /* NSString+QuoteFix.m in Sources */,
+				44C312931861A6FA001ADB26 /* NSString+FuzzyCompare.m in Sources */,
 				94BEF7671859906A00189580 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
