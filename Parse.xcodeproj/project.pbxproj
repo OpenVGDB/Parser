@@ -37,10 +37,6 @@
 		947B9E30185C0FFA00C93A27 /* NSString+Contains.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Contains.m"; sourceTree = "<group>"; };
 		947B9E36185CC67300C93A27 /* CHCSVParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHCSVParser.h; sourceTree = "<group>"; };
 		947B9E37185CC67300C93A27 /* CHCSVParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHCSVParser.m; sourceTree = "<group>"; };
-		947B9E40185D337200C93A27 /* 5200.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = 5200.csv; sourceTree = "<group>"; };
-		947B9E41185D337200C93A27 /* 7800.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = 7800.csv; sourceTree = "<group>"; };
-		947B9E44185D337200C93A27 /* Colecovision.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = Colecovision.csv; sourceTree = "<group>"; };
-		947B9E48185D337200C93A27 /* FDS.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = FDS.csv; sourceTree = "<group>"; };
 		947B9E49185D337200C93A27 /* GBA.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = GBA.csv; sourceTree = "<group>"; };
 		947B9E4A185D337200C93A27 /* GBC.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = GBC.csv; sourceTree = "<group>"; };
 		947B9E4B185D337200C93A27 /* GB.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = GB.csv; sourceTree = "<group>"; };
@@ -51,7 +47,6 @@
 		947B9E54185D337200C93A27 /* NGPC.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = NGPC.csv; sourceTree = "<group>"; };
 		947B9E56185D337200C93A27 /* NES.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = NES.csv; sourceTree = "<group>"; };
 		947B9E57185D337200C93A27 /* N64.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = N64.csv; sourceTree = "<group>"; };
-		947B9E5D185D337200C93A27 /* 32X.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = 32X.csv; sourceTree = "<group>"; };
 		947B9E5F185D337200C93A27 /* SMS.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = SMS.csv; sourceTree = "<group>"; };
 		947B9E60185D337200C93A27 /* SG1000.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = SG1000.csv; sourceTree = "<group>"; };
 		947B9E61185D337200C93A27 /* SNES.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = SNES.csv; sourceTree = "<group>"; };
@@ -111,6 +106,12 @@
 		94E4C6E616D5F2B400FDFB82 /* Parse.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Parse.1; sourceTree = "<group>"; };
 		EB6AFA76186D7A11002D0C06 /* NSString+CleanUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CleanUp.m"; sourceTree = "<group>"; };
 		EB6AFA77186D7A11002D0C06 /* NSString+CleanUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CleanUp.h"; sourceTree = "<group>"; };
+		EB6AFA79186D7C54002D0C06 /* 32X.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = 32X.csv; sourceTree = "<group>"; };
+		EB6AFA7A186D8346002D0C06 /* 5200.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = 5200.csv; sourceTree = "<group>"; };
+		EB6AFA7B186D8370002D0C06 /* 7800.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = 7800.csv; sourceTree = "<group>"; };
+		EB6AFA7C186D8386002D0C06 /* Colecovision.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = Colecovision.csv; sourceTree = "<group>"; };
+		EB6AFA7D186D83A1002D0C06 /* FDS.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = FDS.csv; sourceTree = "<group>"; };
+		EB6AFA7E186D8534002D0C06 /* 2600.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = 2600.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,10 +138,12 @@
 		947B9E3C185D337200C93A27 /* covers */ = {
 			isa = PBXGroup;
 			children = (
-				947B9E40185D337200C93A27 /* 5200.csv */,
-				947B9E41185D337200C93A27 /* 7800.csv */,
-				947B9E44185D337200C93A27 /* Colecovision.csv */,
-				947B9E48185D337200C93A27 /* FDS.csv */,
+				EB6AFA7E186D8534002D0C06 /* 2600.csv */,
+				EB6AFA7D186D83A1002D0C06 /* FDS.csv */,
+				EB6AFA7C186D8386002D0C06 /* Colecovision.csv */,
+				EB6AFA7B186D8370002D0C06 /* 7800.csv */,
+				EB6AFA7A186D8346002D0C06 /* 5200.csv */,
+				EB6AFA79186D7C54002D0C06 /* 32X.csv */,
 				947B9E49185D337200C93A27 /* GBA.csv */,
 				947B9E4A185D337200C93A27 /* GBC.csv */,
 				947B9E4B185D337200C93A27 /* GB.csv */,
@@ -151,7 +154,6 @@
 				947B9E54185D337200C93A27 /* NGPC.csv */,
 				947B9E56185D337200C93A27 /* NES.csv */,
 				947B9E57185D337200C93A27 /* N64.csv */,
-				947B9E5D185D337200C93A27 /* 32X.csv */,
 				947B9E5F185D337200C93A27 /* SMS.csv */,
 				947B9E60185D337200C93A27 /* SG1000.csv */,
 				947B9E61185D337200C93A27 /* SNES.csv */,
