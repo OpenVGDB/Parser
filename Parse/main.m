@@ -9,6 +9,7 @@
 //#import "NSString+QuoteFix.h"
 #import "NSString+Contains.h"
 #import "CHCSVParser.h"
+#import "NSString+CleanUp.h"
 
 @interface CSV: NSObject {
 @public
@@ -170,21 +171,26 @@ int main(int argc, const char * argv[])
                 genre = @"NULL";
                 releaseDate = @"NULL";
                 referenceURL = @"NULL";
+                
+                // Clean up the releases title only once
+                NSString *releaseTitle = [[releases valueForKeyPath:@"releaseTitleName"] stringByCleaningUpString];
 
                 // Match covers to titles
                 for (NSDictionary *covers in dataSource->coversReturnArray) {
                         // TODO: Add in loic's secret sauce matching for Jap region titles
                         // TODO: Possibly use https://github.com/thetron/StringScore or https://gist.github.com/boratlibre/1593632
                         // Did we find an Exact Match "title" between 'releases' and 'covers' arrays?
+                    
                         if (// Remove all non-alphanumeric chars and make lowercase as to increase matches
-                            [[[[covers valueForKeyPath:@"CoverRegionName"] componentsSeparatedByCharactersInSet:[[NSCharacterSet alphanumericCharacterSet] invertedSet]] componentsJoinedByString:@""] containsString:[[[releases valueForKeyPath:@"releaseTitleName"] componentsSeparatedByCharactersInSet:[[NSCharacterSet alphanumericCharacterSet] invertedSet]] componentsJoinedByString:@""] options:NSCaseInsensitiveSearch])
+                            [[[covers valueForKeyPath:@"Title"] stringByCleaningUpString] isEqualToString:releaseTitle])
+                            
                         {
                             matchFound = YES;
 
                             // Match metadata to titles
                             for (NSDictionary *metadata in dataSource->metadataReturnArray)
                             {
-                                if ([[[[metadata valueForKeyPath:@"Title"] componentsSeparatedByCharactersInSet:[[NSCharacterSet alphanumericCharacterSet] invertedSet]] componentsJoinedByString:@""] containsString:[[[releases valueForKeyPath:@"releaseTitleName"] componentsSeparatedByCharactersInSet:[[NSCharacterSet alphanumericCharacterSet] invertedSet]] componentsJoinedByString:@""] options:NSCaseInsensitiveSearch])
+                                if ([[[metadata valueForKeyPath:@"Title"] stringByCleaningUpString] isEqualToString:releaseTitle])
                                 {
                                     // Default these fields to NULL for clean DB import and remove space found at end of "ReleaseDate" field in the metadata CSVs
                                     genre = [[metadata valueForKeyPath:@"Genres"] isEqualToString:@"\"\""] ? @"NULL" : [metadata valueForKeyPath:@"Genres"];
