@@ -137,6 +137,7 @@ int main(int argc, const char * argv[])
         NSString *metadataCSVPATH = [[@(__FILE__) stringByDeletingLastPathComponent] stringByAppendingPathComponent:@"metadata/32X.csv"];
         
         NSArray *metadataFormat = @[ @"Title",
+                                     @"Region",
                                      @"Genres",
                                      @"Description",
                                      @"GameFAQs_Reader_Rating",
