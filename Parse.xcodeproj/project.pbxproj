@@ -14,6 +14,7 @@
 		94BEF76A1859A0CE00189580 /* NSString+QuoteFix.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BEF7691859A0CE00189580 /* NSString+QuoteFix.m */; };
 		94E4C6E016D5F2B400FDFB82 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E4C6DF16D5F2B400FDFB82 /* Foundation.framework */; };
 		94E4C6E716D5F2B400FDFB82 /* Parse.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 94E4C6E616D5F2B400FDFB82 /* Parse.1 */; };
+		EB6AFA78186D7A11002D0C06 /* NSString+CleanUp.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6AFA76186D7A11002D0C06 /* NSString+CleanUp.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -108,6 +109,8 @@
 		94E4C6DF16D5F2B400FDFB82 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		94E4C6E516D5F2B400FDFB82 /* Parse-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Parse-Prefix.pch"; sourceTree = "<group>"; };
 		94E4C6E616D5F2B400FDFB82 /* Parse.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Parse.1; sourceTree = "<group>"; };
+		EB6AFA76186D7A11002D0C06 /* NSString+CleanUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CleanUp.m"; sourceTree = "<group>"; };
+		EB6AFA77186D7A11002D0C06 /* NSString+CleanUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CleanUp.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +248,8 @@
 		94E4C6E116D5F2B400FDFB82 /* Parse */ = {
 			isa = PBXGroup;
 			children = (
+				EB6AFA76186D7A11002D0C06 /* NSString+CleanUp.m */,
+				EB6AFA77186D7A11002D0C06 /* NSString+CleanUp.h */,
 				44C312911861A6FA001ADB26 /* NSString+FuzzyCompare.h */,
 				44C312921861A6FA001ADB26 /* NSString+FuzzyCompare.m */,
 				947B9E98185D653900C93A27 /* releases */,
@@ -321,6 +326,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB6AFA78186D7A11002D0C06 /* NSString+CleanUp.m in Sources */,
 				947B9E38185CC68700C93A27 /* CHCSVParser.m in Sources */,
 				947B9E31185C0FFA00C93A27 /* NSString+Contains.m in Sources */,
 				94BEF76A1859A0CE00189580 /* NSString+QuoteFix.m in Sources */,
