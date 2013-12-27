@@ -54,8 +54,10 @@ static NSString *boxFront, *boxBack, *cart, *disc, *description, *developer, *pu
             continue;
         NSMutableDictionary *tmpDict = [NSMutableDictionary dictionary];
         for ( NSInteger j = 0; j < [format count]; j++ ) {
-            if ( [format objectAtIndex:j] != [NSNull null] ) {
-                [tmpDict setObject:[rowComponents objectAtIndex:j] forKey:[format objectAtIndex:j]];
+            @autoreleasepool {
+                if ( [format objectAtIndex:j] != [NSNull null] ) {
+                    [tmpDict setObject:[rowComponents objectAtIndex:j] forKey:[format objectAtIndex:j]];
+                }
             }
         }
         [returnArray addObject:tmpDict];
@@ -123,8 +125,10 @@ int main(int argc, const char * argv[])
         
         NSArray *coversFormat = @[ @"Title",
                                    @"CoverRegionName",
-                                   @"CoverType",
-                                   @"CoverURL"
+                                   @"CoverFrontURL",
+                                   @"CoverBackURL",
+                                   @"EnglishTitle",
+                                   @"ReferenceURL"
                                    ];
 
         [dataSource arrayFromCSV:coversCSVPATH returnArray:dataSource->coversReturnArray format:coversFormat ignoreHeader:YES];
@@ -201,21 +205,12 @@ int main(int argc, const char * argv[])
                                     break;
                                 }
                             }
-
+                            
                             // USA region
-                            if ([[releases valueForKeyPath:@"TEMPregionLocalizedName"] isEqualToString:@"\"USA\""] && [[covers valueForKeyPath:@"CoverRegionName"] containsString:@"(US, "])
+                            if ([[releases valueForKeyPath:@"TEMPregionLocalizedName"] isEqualToString:@"\"USA\""] && [[covers valueForKeyPath:@"CoverRegionName"] isEqualToString:@"\"US\""])
                             {
-                                // get the front cover
-                                if ([[covers valueForKeyPath:@"CoverType"] isEqualToString:@"\"Box Front\""])
-                                {
-                                    boxFront = [[covers valueForKeyPath:@"CoverURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
-                                    continue;
-                                }
-                                // get the back cover
-                                else if ([[covers valueForKeyPath:@"CoverType"] isEqualToString:@"\"Box Back\""])
-                                {
-                                    boxBack = [[covers valueForKeyPath:@"CoverURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
-                                }
+                                boxFront = [[covers valueForKeyPath:@"CoverFrontURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
+                                boxBack = [[covers valueForKeyPath:@"CoverBackURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
 
                                 [dataSource writeLine];
                                 matchCounter++;
@@ -223,19 +218,10 @@ int main(int argc, const char * argv[])
                                 break;
                             }
                             // Europe region
-                            else if ([[releases valueForKeyPath:@"TEMPregionLocalizedName"] isEqualToString:@"\"Europe\""] && [[covers valueForKeyPath:@"CoverRegionName"] containsString:@"(EU, "])
+                            else if ([[releases valueForKeyPath:@"TEMPregionLocalizedName"] isEqualToString:@"\"Europe\""] && [[covers valueForKeyPath:@"CoverRegionName"] isEqualToString:@"\"EU\""])
                             {
-                                // get the front cover
-                                if ([[covers valueForKeyPath:@"CoverType"] isEqualToString:@"\"Box Front\""])
-                                {
-                                    boxFront = [[covers valueForKeyPath:@"CoverURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
-                                    continue;
-                                }
-                                // get the back cover
-                                else if ([[covers valueForKeyPath:@"CoverType"] isEqualToString:@"\"Box Back\""])
-                                {
-                                    boxBack = [[covers valueForKeyPath:@"CoverURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
-                                }
+                                boxFront = [[covers valueForKeyPath:@"CoverFrontURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
+                                boxBack = [[covers valueForKeyPath:@"CoverBackURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
 
                                 [dataSource writeLine];
                                 matchCounter++;
@@ -243,19 +229,10 @@ int main(int argc, const char * argv[])
                                 break;
                             }
                             // Japan region
-                            else if ([[releases valueForKeyPath:@"TEMPregionLocalizedName"] isEqualToString:@"\"Japan\""] && [[covers valueForKeyPath:@"CoverRegionName"] containsString:@"(JP, "])
+                            else if ([[releases valueForKeyPath:@"TEMPregionLocalizedName"] isEqualToString:@"\"Japan\""] && [[covers valueForKeyPath:@"CoverRegionName"] isEqualToString:@"\"JP\""])
                             {
-                                // get the front cover
-                                if ([[covers valueForKeyPath:@"CoverType"] isEqualToString:@"\"Box Front\""])
-                                {
-                                    boxFront = [[covers valueForKeyPath:@"CoverURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
-                                    continue;
-                                }
-                                // get the back cover
-                                else if ([[covers valueForKeyPath:@"CoverType"] isEqualToString:@"\"Box Back\""])
-                                {
-                                    boxBack = [[covers valueForKeyPath:@"CoverURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
-                                }
+                                boxFront = [[covers valueForKeyPath:@"CoverFrontURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
+                                boxBack = [[covers valueForKeyPath:@"CoverBackURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
 
                                 [dataSource writeLine];
                                 matchCounter++;
@@ -263,39 +240,21 @@ int main(int argc, const char * argv[])
                                 break;
                             }
                             // Asia region
-                            else if ([[releases valueForKeyPath:@"TEMPregionLocalizedName"] isEqualToString:@"\"Asia\""] && [[covers valueForKeyPath:@"CoverRegionName"] containsString:@"(AS, "])
+                            else if ([[releases valueForKeyPath:@"TEMPregionLocalizedName"] isEqualToString:@"\"Asia\""] && [[covers valueForKeyPath:@"CoverRegionName"] isEqualToString:@"\"AS\""])
                             {
-                                // get the front cover
-                                if ([[covers valueForKeyPath:@"CoverType"] isEqualToString:@"\"Box Front\""])
-                                {
-                                    boxFront = [[covers valueForKeyPath:@"CoverURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
-                                    continue;
-                                }
-                                // get the back cover
-                                else if ([[covers valueForKeyPath:@"CoverType"] isEqualToString:@"\"Box Back\""])
-                                {
-                                    boxBack = [[covers valueForKeyPath:@"CoverURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
-                                }
-
+                                boxFront = [[covers valueForKeyPath:@"CoverFrontURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
+                                boxBack = [[covers valueForKeyPath:@"CoverBackURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
+                                
                                 [dataSource writeLine];
                                 matchCounter++;
                                 printCounter++;
                                 break;
                             }
                             // Australia region
-                            else if ([[releases valueForKeyPath:@"TEMPregionLocalizedName"] isEqualToString:@"\"Australia\""] && [[covers valueForKeyPath:@"CoverRegionName"] containsString:@"(AU, "])
+                            else if ([[releases valueForKeyPath:@"TEMPregionLocalizedName"] isEqualToString:@"\"Australia\""] && [[covers valueForKeyPath:@"CoverRegionName"] isEqualToString:@"\"AU\""])
                             {
-                                // get the front cover
-                                if ([[covers valueForKeyPath:@"CoverType"] isEqualToString:@"\"Box Front\""])
-                                {
-                                    boxFront = [[covers valueForKeyPath:@"CoverURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
-                                    continue;
-                                }
-                                // get the back cover
-                                else if ([[covers valueForKeyPath:@"CoverType"] isEqualToString:@"\"Box Back\""])
-                                {
-                                    boxBack = [[covers valueForKeyPath:@"CoverURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
-                                }
+                                boxFront = [[covers valueForKeyPath:@"CoverFrontURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
+                                boxBack = [[covers valueForKeyPath:@"CoverBackURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
 
                                 [dataSource writeLine];
                                 matchCounter++;
@@ -303,19 +262,10 @@ int main(int argc, const char * argv[])
                                 break;
                             }
                             // Brazil region
-                            else if ([[releases valueForKeyPath:@"TEMPregionLocalizedName"] isEqualToString:@"\"Brazil\""] && [[covers valueForKeyPath:@"CoverRegionName"] containsString:@"(SA, "])
+                            else if ([[releases valueForKeyPath:@"TEMPregionLocalizedName"] isEqualToString:@"\"Brazil\""] && [[covers valueForKeyPath:@"CoverRegionName"] isEqualToString:@"\"SA\""])
                             {
-                                // get the front cover
-                                if ([[covers valueForKeyPath:@"CoverType"] isEqualToString:@"\"Box Front\""])
-                                {
-                                    boxFront = [[covers valueForKeyPath:@"CoverURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
-                                    continue;
-                                }
-                                // get the back cover
-                                else if ([[covers valueForKeyPath:@"CoverType"] isEqualToString:@"\"Box Back\""])
-                                {
-                                    boxBack = [[covers valueForKeyPath:@"CoverURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
-                                }
+                                boxFront = [[covers valueForKeyPath:@"CoverFrontURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
+                                boxBack = [[covers valueForKeyPath:@"CoverBackURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
 
                                 [dataSource writeLine];
                                 matchCounter++;
@@ -323,19 +273,10 @@ int main(int argc, const char * argv[])
                                 break;
                             }
                             // Korea region
-                            else if ([[releases valueForKeyPath:@"TEMPregionLocalizedName"] isEqualToString:@"\"Brazil\""] && [[covers valueForKeyPath:@"CoverRegionName"] containsString:@"(KO, "])
+                            else if ([[releases valueForKeyPath:@"TEMPregionLocalizedName"] isEqualToString:@"\"Korea\""] && [[covers valueForKeyPath:@"CoverRegionName"] isEqualToString:@"\"KO\""])
                             {
-                                // get the front cover
-                                if ([[covers valueForKeyPath:@"CoverType"] isEqualToString:@"\"Box Front\""])
-                                {
-                                    boxFront = [[covers valueForKeyPath:@"CoverURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
-                                    continue;
-                                }
-                                // get the back cover
-                                else if ([[covers valueForKeyPath:@"CoverType"] isEqualToString:@"\"Box Back\""])
-                                {
-                                    boxBack = [[covers valueForKeyPath:@"CoverURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
-                                }
+                                boxFront = [[covers valueForKeyPath:@"CoverFrontURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
+                                boxBack = [[covers valueForKeyPath:@"CoverBackURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
 
                                 [dataSource writeLine];
                                 matchCounter++;
