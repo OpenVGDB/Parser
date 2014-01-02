@@ -33,6 +33,15 @@
 /* Begin PBXFileReference section */
 		44C312911861A6FA001ADB26 /* NSString+FuzzyCompare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FuzzyCompare.h"; sourceTree = "<group>"; };
 		44C312921861A6FA001ADB26 /* NSString+FuzzyCompare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FuzzyCompare.m"; sourceTree = "<group>"; };
+		947944C418762CE4008259C6 /* 2600.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = 2600.csv; sourceTree = "<group>"; };
+		947944C518762D1B008259C6 /* GBC.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = GBC.csv; sourceTree = "<group>"; };
+		947944C618762D26008259C6 /* GB.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = GB.csv; sourceTree = "<group>"; };
+		947944C718762D50008259C6 /* FDS.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = FDS.csv; sourceTree = "<group>"; };
+		947944C818762D5C008259C6 /* Colecovision.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = Colecovision.csv; sourceTree = "<group>"; };
+		947944C918762DAC008259C6 /* SMS.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = SMS.csv; sourceTree = "<group>"; };
+		947944CA18762E8D008259C6 /* WS.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = WS.csv; sourceTree = "<group>"; };
+		947944CB18762ED6008259C6 /* DS.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = DS.csv; sourceTree = "<group>"; };
+		947944CC18762F00008259C6 /* DS.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = DS.csv; sourceTree = "<group>"; };
 		947B9E2F185C0FFA00C93A27 /* NSString+Contains.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Contains.h"; sourceTree = "<group>"; };
 		947B9E30185C0FFA00C93A27 /* NSString+Contains.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Contains.m"; sourceTree = "<group>"; };
 		947B9E36185CC67300C93A27 /* CHCSVParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHCSVParser.h; sourceTree = "<group>"; };
@@ -138,12 +147,13 @@
 		947B9E3C185D337200C93A27 /* covers */ = {
 			isa = PBXGroup;
 			children = (
+				EB6AFA79186D7C54002D0C06 /* 32X.csv */,
 				EB6AFA7E186D8534002D0C06 /* 2600.csv */,
-				EB6AFA7D186D83A1002D0C06 /* FDS.csv */,
-				EB6AFA7C186D8386002D0C06 /* Colecovision.csv */,
 				EB6AFA7B186D8370002D0C06 /* 7800.csv */,
 				EB6AFA7A186D8346002D0C06 /* 5200.csv */,
-				EB6AFA79186D7C54002D0C06 /* 32X.csv */,
+				EB6AFA7C186D8386002D0C06 /* Colecovision.csv */,
+				947944CB18762ED6008259C6 /* DS.csv */,
+				EB6AFA7D186D83A1002D0C06 /* FDS.csv */,
 				947B9E49185D337200C93A27 /* GBA.csv */,
 				947B9E4A185D337200C93A27 /* GBC.csv */,
 				947B9E4B185D337200C93A27 /* GB.csv */,
@@ -160,6 +170,7 @@
 				947B9E63185D337200C93A27 /* PCE.csv */,
 				947B9E64185D337200C93A27 /* Vectrex.csv */,
 				947B9E65185D337200C93A27 /* VB.csv */,
+				947944CA18762E8D008259C6 /* WS.csv */,
 				947B9E67185D337200C93A27 /* WSC.csv */,
 			);
 			path = covers;
@@ -168,9 +179,16 @@
 		947B9E68185D337200C93A27 /* metadata */ = {
 			isa = PBXGroup;
 			children = (
+				947B9E8C185D337200C93A27 /* 32X.csv */,
+				947944C418762CE4008259C6 /* 2600.csv */,
 				947B9E6D185D337200C93A27 /* 5200.csv */,
 				947B9E6E185D337200C93A27 /* 7800.csv */,
+				947944C818762D5C008259C6 /* Colecovision.csv */,
+				947944CC18762F00008259C6 /* DS.csv */,
+				947944C718762D50008259C6 /* FDS.csv */,
 				947B9E79185D337200C93A27 /* GBA.csv */,
+				947944C518762D1B008259C6 /* GBC.csv */,
+				947944C618762D26008259C6 /* GB.csv */,
 				947B9E7C185D337200C93A27 /* GG.csv */,
 				947B9E7D185D337200C93A27 /* MD.csv */,
 				947B9E7F185D337200C93A27 /* Jaguar.csv */,
@@ -178,14 +196,14 @@
 				947B9E82185D337200C93A27 /* NGPC.csv */,
 				947B9E83185D337200C93A27 /* NES.csv */,
 				947B9E84185D337200C93A27 /* N64.csv */,
-				947B9E8C185D337200C93A27 /* 32X.csv */,
+				947944C918762DAC008259C6 /* SMS.csv */,
 				947B9E8E185D337200C93A27 /* SG1000.csv */,
 				947B9E8F185D337200C93A27 /* SNES.csv */,
 				947B9E91185D337200C93A27 /* PCE.csv */,
 				947B9E92185D337200C93A27 /* Vectrex.csv */,
 				947B9E94185D337200C93A27 /* VB.csv */,
-				947B9E96185D337200C93A27 /* WSC.csv */,
 				947B9E97185D337200C93A27 /* WS.csv */,
+				947B9E96185D337200C93A27 /* WSC.csv */,
 			);
 			path = metadata;
 			sourceTree = "<group>";
