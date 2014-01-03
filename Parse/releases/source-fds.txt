@@ -156,7 +156,7 @@
 2859,2808,"Time Twist: Rekishi no Katasumi de",13,"Japan","FDS","Nintendo Famicom Disk System","","","","","","","","","",""
 2860,2809,"Tonkachi Editor",13,"Japan","FDS","Nintendo Famicom Disk System","","","","","","","","","",""
 2861,2810,"Tooyama no Kinsan Space Chou: Mr. Gold",13,"Japan","FDS","Nintendo Famicom Disk System","","","","","","","","","",""
-2862,2811,"TwinBee",13,"Japan","FDS","Nintendo Famicom Disk System","","","","","","","","","",""
+2862,2811,"TwinBee (Disk Writer)",13,"Japan","FDS","Nintendo Famicom Disk System","","","","","","","","","",""
 2863,2812,"Ultraman 2: Shutsugeki Katoku Tai",13,"Japan","FDS","Nintendo Famicom Disk System","","","","","","","","","",""
 2864,2813,"Ultraman Club: Chikyuu Dakkan Sakusen",13,"Japan","FDS","Nintendo Famicom Disk System","","","","","","","","","",""
 2865,2814,"Ultraman Club: Chikyuu Dakkan Sakusen",13,"Japan","FDS","Nintendo Famicom Disk System","","","","","","","","","",""
