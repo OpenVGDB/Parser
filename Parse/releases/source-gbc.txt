@@ -678,7 +678,7 @@
 5446,5014,"Le Mans 24 Hours",7,"Europe","GBC","Nintendo Game Boy Color","","","","","","","","","",""
 5447,5015,"Legend of the River King 2",7,"Europe","GBC","Nintendo Game Boy Color","","","","","","","","","",""
 5448,5016,"Legend of the River King 2",21,"USA","GBC","Nintendo Game Boy Color","","","","","","","","","",""
-5449,5017,"Legend of the River King GB",21,"USA","GBC","Nintendo Game Boy Color","","","","","","","","","",""
+5449,5017,"Legend of the River King GBC",21,"USA","GBC","Nintendo Game Boy Color","","","","","","","","","",""
 5450,5018,"Legend of the River King GB",7,"Europe","GBC","Nintendo Game Boy Color","","","","","","","","","",""
 5451,5019,"Legend of the River King GB",10,"Germany","GBC","Nintendo Game Boy Color","","","","","","","","","",""
 5452,5020,"The Legend of Zelda: Link's Awakening DX",7,"Europe","GBC","Nintendo Game Boy Color","","","","","","","","","",""
