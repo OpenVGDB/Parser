@@ -210,8 +210,8 @@ int main(int argc, const char * argv[])
                             // USA region
                             if ([[releases valueForKeyPath:@"TEMPregionLocalizedName"] isEqualToString:@"\"USA\""] && [[covers valueForKeyPath:@"CoverRegionName"] isEqualToString:@"\"US\""])
                             {
-                                boxFront = [[covers valueForKeyPath:@"CoverFrontURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
-                                boxBack = [[covers valueForKeyPath:@"CoverBackURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
+                                boxFront = [[covers valueForKeyPath:@"CoverFrontURL"] isEqualToString:@"\"\""] ? @"NULL" : [[covers valueForKeyPath:@"CoverFrontURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
+                                boxBack = [[covers valueForKeyPath:@"CoverBackURL"] isEqualToString:@"\"\""] ? @"NULL" : [[covers valueForKeyPath:@"CoverBackURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
 
                                 [dataSource writeLine];
                                 matchCounter++;
@@ -221,8 +221,8 @@ int main(int argc, const char * argv[])
                             // Europe region
                             else if ([[releases valueForKeyPath:@"TEMPregionLocalizedName"] isEqualToString:@"\"Europe\""] && [[covers valueForKeyPath:@"CoverRegionName"] isEqualToString:@"\"EU\""])
                             {
-                                boxFront = [[covers valueForKeyPath:@"CoverFrontURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
-                                boxBack = [[covers valueForKeyPath:@"CoverBackURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
+                                boxFront = [[covers valueForKeyPath:@"CoverFrontURL"] isEqualToString:@"\"\""] ? @"NULL" : [[covers valueForKeyPath:@"CoverFrontURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
+                                boxBack = [[covers valueForKeyPath:@"CoverBackURL"] isEqualToString:@"\"\""] ? @"NULL" : [[covers valueForKeyPath:@"CoverBackURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
 
                                 [dataSource writeLine];
                                 matchCounter++;
@@ -232,8 +232,8 @@ int main(int argc, const char * argv[])
                             // Japan region
                             else if ([[releases valueForKeyPath:@"TEMPregionLocalizedName"] isEqualToString:@"\"Japan\""] && [[covers valueForKeyPath:@"CoverRegionName"] isEqualToString:@"\"JP\""])
                             {
-                                boxFront = [[covers valueForKeyPath:@"CoverFrontURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
-                                boxBack = [[covers valueForKeyPath:@"CoverBackURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
+                                boxFront = [[covers valueForKeyPath:@"CoverFrontURL"] isEqualToString:@"\"\""] ? @"NULL" : [[covers valueForKeyPath:@"CoverFrontURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
+                                boxBack = [[covers valueForKeyPath:@"CoverBackURL"] isEqualToString:@"\"\""] ? @"NULL" : [[covers valueForKeyPath:@"CoverBackURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
 
                                 [dataSource writeLine];
                                 matchCounter++;
@@ -243,8 +243,8 @@ int main(int argc, const char * argv[])
                             // Asia region
                             else if ([[releases valueForKeyPath:@"TEMPregionLocalizedName"] isEqualToString:@"\"Asia\""] && [[covers valueForKeyPath:@"CoverRegionName"] isEqualToString:@"\"AS\""])
                             {
-                                boxFront = [[covers valueForKeyPath:@"CoverFrontURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
-                                boxBack = [[covers valueForKeyPath:@"CoverBackURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
+                                boxFront = [[covers valueForKeyPath:@"CoverFrontURL"] isEqualToString:@"\"\""] ? @"NULL" : [[covers valueForKeyPath:@"CoverFrontURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
+                                boxBack = [[covers valueForKeyPath:@"CoverBackURL"] isEqualToString:@"\"\""] ? @"NULL" : [[covers valueForKeyPath:@"CoverBackURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
                                 
                                 [dataSource writeLine];
                                 matchCounter++;
@@ -254,8 +254,8 @@ int main(int argc, const char * argv[])
                             // Australia region
                             else if ([[releases valueForKeyPath:@"TEMPregionLocalizedName"] isEqualToString:@"\"Australia\""] && [[covers valueForKeyPath:@"CoverRegionName"] isEqualToString:@"\"AU\""])
                             {
-                                boxFront = [[covers valueForKeyPath:@"CoverFrontURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
-                                boxBack = [[covers valueForKeyPath:@"CoverBackURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
+                                boxFront = [[covers valueForKeyPath:@"CoverFrontURL"] isEqualToString:@"\"\""] ? @"NULL" : [[covers valueForKeyPath:@"CoverFrontURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
+                                boxBack = [[covers valueForKeyPath:@"CoverBackURL"] isEqualToString:@"\"\""] ? @"NULL" : [[covers valueForKeyPath:@"CoverBackURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
 
                                 [dataSource writeLine];
                                 matchCounter++;
@@ -265,8 +265,8 @@ int main(int argc, const char * argv[])
                             // Brazil region
                             else if ([[releases valueForKeyPath:@"TEMPregionLocalizedName"] isEqualToString:@"\"Brazil\""] && [[covers valueForKeyPath:@"CoverRegionName"] isEqualToString:@"\"SA\""])
                             {
-                                boxFront = [[covers valueForKeyPath:@"CoverFrontURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
-                                boxBack = [[covers valueForKeyPath:@"CoverBackURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
+                                boxFront = [[covers valueForKeyPath:@"CoverFrontURL"] isEqualToString:@"\"\""] ? @"NULL" : [[covers valueForKeyPath:@"CoverFrontURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
+                                boxBack = [[covers valueForKeyPath:@"CoverBackURL"] isEqualToString:@"\"\""] ? @"NULL" : [[covers valueForKeyPath:@"CoverBackURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
 
                                 [dataSource writeLine];
                                 matchCounter++;
@@ -276,8 +276,8 @@ int main(int argc, const char * argv[])
                             // Korea region
                             else if ([[releases valueForKeyPath:@"TEMPregionLocalizedName"] isEqualToString:@"\"Korea\""] && [[covers valueForKeyPath:@"CoverRegionName"] isEqualToString:@"\"KO\""])
                             {
-                                boxFront = [[covers valueForKeyPath:@"CoverFrontURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
-                                boxBack = [[covers valueForKeyPath:@"CoverBackURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
+                                boxFront = [[covers valueForKeyPath:@"CoverFrontURL"] isEqualToString:@"\"\""] ? @"NULL" : [[covers valueForKeyPath:@"CoverFrontURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
+                                boxBack = [[covers valueForKeyPath:@"CoverBackURL"] isEqualToString:@"\"\""] ? @"NULL" : [[covers valueForKeyPath:@"CoverBackURL"] stringByTrimmingCharactersInSet:[NSCharacterSet punctuationCharacterSet]];
 
                                 [dataSource writeLine];
                                 matchCounter++;
