@@ -12,6 +12,7 @@
 
 - (NSString *)stringByCleaningUpString;
 
+- (NSString *)stringByRemovingParenthesesAndInnerString;
 - (NSString *)stringByRemovingWhitespaceAndNonAlphanumeric;
 - (NSString *)stringByNormalizingJapaneseStuff;
 - (NSString *)stringByNormalizingRomanNumbers;

@@ -23,8 +23,26 @@
     // Could be "not safe"
     //temp = [temp stringByReplacingCommonWords];
     //temp = [temp stringByNormalizingJapaneseStuff];
+    //temp = [temp stringByRemovingParenthesesAndInnerString];
     
     temp = [temp stringByRemovingWhitespaceAndNonAlphanumeric];
+    
+    return temp;
+}
+
+- (NSString *)stringByRemovingParenthesesAndInnerString
+{
+    NSMutableString *temp = [[NSMutableString alloc] initWithString:self];
+    
+    NSRegularExpression *regex = [NSRegularExpression
+                                  regularExpressionWithPattern:@"\\(.+?\\)"
+                                  options:NSRegularExpressionCaseInsensitive
+                                  error:NULL];
+    
+    [regex replaceMatchesInString:temp
+                          options:0
+                            range:NSMakeRange(0, [temp length])
+                     withTemplate:@""];
     
     return temp;
 }
