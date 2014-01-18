@@ -33,6 +33,14 @@
 /* Begin PBXFileReference section */
 		44C312911861A6FA001ADB26 /* NSString+FuzzyCompare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FuzzyCompare.h"; sourceTree = "<group>"; };
 		44C312921861A6FA001ADB26 /* NSString+FuzzyCompare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FuzzyCompare.m"; sourceTree = "<group>"; };
+		94108685188A3FB4007AEB20 /* source-pcecd.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "source-pcecd.txt"; sourceTree = "<group>"; };
+		94108686188A3FB4007AEB20 /* source-psx.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "source-psx.txt"; sourceTree = "<group>"; };
+		94108687188A3FB4007AEB20 /* source-scd.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "source-scd.txt"; sourceTree = "<group>"; };
+		94108688188A3FC5007AEB20 /* source-ss.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "source-ss.txt"; sourceTree = "<group>"; };
+		94108689188A4040007AEB20 /* PCECD.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = PCECD.csv; sourceTree = "<group>"; };
+		9410868A188A4040007AEB20 /* PSX.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = PSX.csv; sourceTree = "<group>"; };
+		9410868B188A4040007AEB20 /* SCD.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = SCD.csv; sourceTree = "<group>"; };
+		9410868C188A4049007AEB20 /* SS.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = SS.csv; sourceTree = "<group>"; };
 		947944C418762CE4008259C6 /* 2600.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = 2600.csv; sourceTree = "<group>"; };
 		947944C518762D1B008259C6 /* GBC.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = GBC.csv; sourceTree = "<group>"; };
 		947944C618762D26008259C6 /* GB.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = GB.csv; sourceTree = "<group>"; };
@@ -164,10 +172,14 @@
 				947B9E54185D337200C93A27 /* NGPC.csv */,
 				947B9E56185D337200C93A27 /* NES.csv */,
 				947B9E57185D337200C93A27 /* N64.csv */,
+				947B9E63185D337200C93A27 /* PCE.csv */,
+				94108689188A4040007AEB20 /* PCECD.csv */,
+				9410868A188A4040007AEB20 /* PSX.csv */,
+				9410868B188A4040007AEB20 /* SCD.csv */,
 				947B9E5F185D337200C93A27 /* SMS.csv */,
 				947B9E60185D337200C93A27 /* SG1000.csv */,
 				947B9E61185D337200C93A27 /* SNES.csv */,
-				947B9E63185D337200C93A27 /* PCE.csv */,
+				9410868C188A4049007AEB20 /* SS.csv */,
 				947B9E64185D337200C93A27 /* Vectrex.csv */,
 				947B9E65185D337200C93A27 /* VB.csv */,
 				947944CA18762E8D008259C6 /* WS.csv */,
@@ -228,9 +240,13 @@
 				947B9EA7185D653900C93A27 /* source-ngp.txt */,
 				947B9EA8185D653900C93A27 /* source-ngpc.txt */,
 				947B9EA9185D653900C93A27 /* source-pce.txt */,
+				94108685188A3FB4007AEB20 /* source-pcecd.txt */,
+				94108686188A3FB4007AEB20 /* source-psx.txt */,
+				94108687188A3FB4007AEB20 /* source-scd.txt */,
 				947B9EAA185D653900C93A27 /* source-sg1000.txt */,
 				947B9EAB185D653900C93A27 /* source-sms.txt */,
 				947B9EAC185D653900C93A27 /* source-snes.txt */,
+				94108688188A3FC5007AEB20 /* source-ss.txt */,
 				947B9EAD185D653900C93A27 /* source-supergrafx.txt */,
 				947B9EAE185D653900C93A27 /* source-vb.txt */,
 				947B9EAF185D653900C93A27 /* source-vectrex.txt */,
